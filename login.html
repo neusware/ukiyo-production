@@ -12,22 +12,19 @@
             font-family: Arial, sans-serif;
             height: 100%;
             font-size: 14px;
-            /* overflow-x: hidden; /*previene scrollbar horizontal */ */
         }
-        .container {
+        .contenedor {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
-
-        .top-banner {
+        .banner-superior {
             background-color: #000;
             color: #fff;
             padding: 10px 20px;
             text-align: center;
             font-size: 10.5px;
         }
-
         header {
             background-color: #fff;
             border-bottom: 1px solid #e0e0e0;
@@ -42,30 +39,30 @@
             font-weight: bold;
             font-size: 24px;
         }
-        .nav-links {
+        .enlaces-nav {
             list-style: none;
             display: flex;
             gap: 20px;
         }
-        .nav-links a {
+        .enlaces-nav a {
             text-decoration: none;
             color: #000;
         }
-        .user-actions {
+        .acciones-usuario {
             display: flex;
             gap: 10px;
         }
-        .user-actions img {
+        .acciones-usuario img {
             width: 20px;
             height: 20px;
         }
-        .user-actions a {
+        .acciones-usuario a {
             text-decoration: none;
             color: #000;
             display: flex;
             align-items: center;
         }
-        .user-actions a:last-child {
+        .acciones-usuario a:last-child {
             margin-left: 8px;
             border-left: 1px solid #000;
             padding-left: 15px;
@@ -74,38 +71,36 @@
             flex-grow: 1;
             display: flex;
             justify-content: center;
-            align-items: flex-start; /* Change from center to flex-start */
+            align-items: flex-start;
             padding: 50px 20px;
         }
-        .login-container {
+        .contenedor-login {
             display: flex;
             width: 100%;
             max-width: 800px;
-            gap: 60px; /* Increase this value from 40px to 60px */
-            align-items: flex-start; /* Add this line to align tops of columns */
+            gap: 60px;
+            align-items: flex-start;
         }
-        .login-form, .register-info {
+        .formulario-login, .info-registro {
             flex: 1;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-           /*  min-height: 30px; */ /* Add this line to ensure equal height: ;*/
         }
-        .register-info {
-            border-left: 1px solid #e0e0e0;  /*Add this line */
-            padding-left: 80px; /* Add this line */
-            margin-left:25px;
+        .info-registro {
+            border-left: 1px solid #e0e0e0;
+            padding-left: 80px;
+            margin-left: 25px;
         }
-        .login-form h2, .register-info h2 {
-            /* Margin bajo titulos */
+        .formulario-login h2, .info-registro h2 {
             margin-bottom: 20px;
         }
         h2 {
             margin-bottom: 20px;
-            font-size: 1.5em; /* Add this line to reduce heading size */
+            font-size: 1.5em;
         }
         input[type="email"], input[type="password"] {
-            width: calc(100% - 22px); /* Subtracting total horizontal padding and border */
+            width: calc(100% - 22px);
             padding: 10px;
             margin-bottom: 15px;
             border: 1px solid #ccc;
@@ -121,87 +116,83 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            
-            
         }
-        .login-form button {
+        .formulario-login button {
             width: 100%;
             padding: 10px;
             margin-top: 15px;
-            margin-bottom: 0; /*removed margin-bottom*/
+            margin-bottom: 0;
             font-size: 14px;
-            height: 38px; /* Match the height of input fields */
+            height: 38px;
         }
-        .forgot-password {
+        .olvido-contrasena {
             display: block;
             margin-top: 10px;
-            text-align: left; /* Update text-align */
+            text-align: left;
             color: #000;
             text-decoration: underline;
-            font-size: 12px; /* Add font-size */
+            font-size: 12px;
         }
-        .benefits {
+        .beneficios {
             flex-grow: 1;
             list-style-type: none;
             padding: 0;
-            margin-bottom: 30px; /* Add this line to create space above the button */
+            margin-bottom: 30px;
         }
-        .benefits li {
+        .beneficios li {
             margin-bottom: 10px;
             padding-left: 25px;
             position: relative;
         }
-        .benefits li::before {
+        .beneficios li::before {
             content: "✓";
             position: absolute;
             left: 0;
         }
-        .create-account {
+        .crear-cuenta {
             background-color: #fff;
             color: #000;
             border: 1px solid #000;
             margin-top: -12px;
         }
-        .login-form form {
+        .formulario-login form {
             margin-bottom: 20px;
         }
         footer {
             background-color: #f5f5f5;
             padding: 40px 20px 20px;
-            font-size: 12px; /* Reduce from 14px to 12px */
+            font-size: 12px;
         }
-        .footer-content {
+        .contenido-footer {
             display: flex;
             justify-content: space-between;
             max-width: 1200px;
             margin: 0 auto;
         }
-        .footer-left  {
+        .footer-izquierda {
             flex: 1;
-            margin-left: 50px; /* Add this line to create left margin */
+            margin-left: 50px;
         }
-
-        .footer-right{
-            flex:1;
-            margin-left:100px;
+        .footer-derecha {
+            flex: 1;
+            margin-left: 100px;
         }
-
-        .footer-columns {
+        .columnas-footer {
             display: flex;
             flex: 2;
             justify-content: space-between;
         }
-        .footer-column h4 {
+        .columna-footer h4 {
             margin-bottom: 10px;
         }
-        .footer-column ul {
+        .columna-footer ul {
             list-style-type: none;
             padding: 0;
         }
-        .footer-column li {
+        .columna-footer li {
             margin-bottom: 5px;
         }
-        .subscribe-button {
+        .boton-suscribirse {
             background-color: #000;
             color: #fff;
             border: none;
@@ -209,18 +200,15 @@
             cursor: pointer;
             margin-top: 10px;
         }
-        .footer-bottom {
+        .footer-inferior {
             margin-top: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding-top: 20px;
-            /* padding-bottom: 20px; */
-            /* padding: 20px; */
             border-top: 1px solid #e0e0e0;
-            /* background-color:rgba(217, 217, 217, 1); */
         }
-        .footer-links a {
+        .enlaces-footer a {
             margin-left: 15px;
             color: #000;
             text-decoration: none;
@@ -228,14 +216,14 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="top-banner">
+    <div class="contenedor">
+        <div class="banner-superior">
             Envío gratis en tu primer pedido
         </div>
         <header>
             <nav>
                 <div class="logo">UKIYO</div>
-                <ul class="nav-links">
+                <ul class="enlaces-nav">
                     <li><a href="#">Novedades</a></li>
                     <li><a href="#">Anillos</a></li>
                     <li><a href="#">Pendientes</a></li>
@@ -243,12 +231,12 @@
                     <li><a href="#">Pulseras</a></li>
                     <li><a href="#">Diamantes</a></li>
                 </ul>
-                <div class="user-actions">
+                <div class="acciones-usuario">
                     <a href="#">
                         <img src="./img_resources/location-1-svgrepo-com.svg" alt="Localización">
                     </a>
                     <a href="./login.html">
-                        <img src="./img_resources/user.svg"alt="Usuario">
+                        <img src="./img_resources/user.svg" alt="Usuario">
                     </a>
                     <a href="#">
                         <img src="./img_resources/search-svgrepo-com.svg" alt="Buscar">
@@ -261,89 +249,87 @@
         </header>
 
         <main>
-            <div class="login-container">
-                <div class="login-form">
+            <div class="contenedor-login">
+                <div class="formulario-login">
                     <h2>Iniciar sesión</h2>
                     <form action="#" method="#">
                         <input type="email" placeholder="Email" required>
                         <input type="password" placeholder="Contraseña" required>
                         <button type="submit">Iniciar sesión</button>
-                        <a href="#" class="forgot-password">¿Problemas con la contraseña?</a>
+                        <a href="#" class="olvido-contrasena">¿Problemas con la contraseña?</a>
                     </form>
                 </div>
-                <div class="register-info">
+                <div class="info-registro">
                     <h2>Registrarse</h2>
-                    <ul class="benefits">
+                    <ul class="beneficios">
                         <li>Realizar pedidos ágilmente ya que tus datos estarán guardados</li>
                         <li>Guarda tus joyas favoritas</li>
                         <li>Seguimiento de tus pedidos</li>
                         <li>Gestión de devoluciones y cambios fácilmente</li>
                     </ul>
                     <a href="./signup.html">
-                        <button class="create-account">Crear cuenta</button>
+                        <button class="crear-cuenta">Crear cuenta</button>
                     </a>
                 </div>
             </div>
         </main>
 
         <footer>
-    <div class="footer-content">
-        <div class="footer-left">
-            <h3>UKIYO</h3>
-            <p>¿Necesitas ayuda?</p>
-            <p>Política de privacidad</p>
-        </div>
-        <div class="footer-columns">
-            <div class="footer-column">
-                <h4>Productos</h4>
-                <ul>
-                    <li>Anillos</li>
-                    <li>Pulseras</li>
-                    <li>Piercings</li>
-                </ul>
+            <div class="contenido-footer">
+                <div class="footer-izquierda">
+                    <h3>UKIYO</h3>
+                    <p>¿Necesitas ayuda?</p>
+                    <p>Política de privacidad</p>
+                </div>
+                <div class="columnas-footer">
+                    <div class="columna-footer">
+                        <h4>Productos</h4>
+                        <ul>
+                            <li>Anillos</li>
+                            <li>Pulseras</li>
+                            <li>Piercings</li>
+                        </ul>
+                    </div>
+                    <div class="columna-footer">
+                        <h4>Información</h4>
+                        <ul>
+                            <li>Preguntas frecuentes</li>
+                            <li>Gestionar Devolución</li>
+                            <li>Estado de mi pedido</li>
+                        </ul>
+                    </div>
+                    <div class="columna-footer">
+                        <h4>Sobre nosotros</h4>
+                        <ul>
+                            <li>Localizador de tiendas</li>
+                            <li>Trabaja con nosotros</li>
+                            <li>Editorial</li>
+                        </ul>
+                    </div>
+                    <div class="columna-footer">
+                        <h4>¿Necesitas ayuda?</h4>
+                        <ul>
+                            <li>Inicia un chat</li>
+                            <li>Llamar a atención al cliente</li>
+                            <li>customersupport@ukiyo.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-derecha">
+                    <p>Suscríbete a nuestra newsletter y tendrás acceso a novedades y ventajas exclusivas en tu email.</p>
+                    <button class="boton-suscribirse">Suscribirse</button>
+                </div>
             </div>
-            <div class="footer-column">
-                <h4>Información</h4>
-                <ul>
-                    <li>Preguntas frecuentes</li>
-                    <li>Gestionar Devolución</li>
-                    <li>Estado de mi pedido</li>
-                </ul>
+            <div class="footer-inferior">
+                <span>ES - Español</span>
+                <div class="enlaces-footer">
+                    <a href="#">Código ético</a>
+                    <a href="#">Condiciones generales</a>
+                    <a href="#">Política de cookies</a>
+                    <a href="#">Política de privacidad</a>
+                </div>
             </div>
-            <div class="footer-column">
-                <h4>Sobre nosotros</h4>
-                <ul>
-                    <li>Localizador de tiendas</li>
-                    <li>Trabaja con nosotros</li>
-                    <li>Editorial</li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>¿Necesitas ayuda?</h4>
-                <ul>
-                    <li>Inicia un chat</li>
-                    <li>Llamar a atención al cliente</li>
-                    <li>customersupport@ukiyo.com</li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-right">
-            <p>Suscríbete a nuestra newsletter y tendrás acceso a novedades y ventajas exclusivas en tu email.</p>
-            <button class="subscribe-button">Suscribirse</button>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <span>ES - Español</span>
-        <div class="footer-links">
-            <a href="#">Código ético  </a>
-            <a href="#">Condiciones generales</a>
-            <a href="#">Política de cookies</a>
-            <a href="#">Política de privacidad</a>
-        </div>
-    </div>
-</footer>
+        </footer>
     </div>
 </body>
 </html>
-
-<!-- todo, dots between codigo etico (...) | explain behaviour when zoom in/out | top right incons, add location and margin left on carrito -->
