@@ -11,9 +11,9 @@ ___
 
 ### Estructura del Proyecto
 
-- **login.html**: Página de inicio de sesión.
-- **signup.html**: Página principal del sitio.
-- **img_resources/**: Carpeta que contiene las imágenes requeridas.
+- **login.html**: página de inicio de sesión.
+- **signup.html**: página de registro.
+- **img_resources/**: contiene las imágenes requeridas.
 
 
 ### Tecnologías
