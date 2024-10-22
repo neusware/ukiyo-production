@@ -19,7 +19,7 @@ ___
 
 ### Tecnologías
 
-Todo el contenido es HTML y CSS puro.
+HTML y CSS.
 
 ### Despliegue
 
@@ -31,4 +31,4 @@ ___
 
 ### Contacto
 
-Para cualquier duda o sugerencia, pasate por mi perfil [neusware](https://github.com/neusware).
+Para cualquier duda o sugerencia, pásate por mi perfil [neusware](https://github.com/neusware).
