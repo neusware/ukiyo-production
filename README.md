@@ -2,9 +2,9 @@
 
 ### Descripción
 
-Este repositorio contiene la implementación del sitio web '***Ukiyo Jewelry***' en GitHub Pages. 
+Este repositorio contiene la implementación del sitio web '***Ukiyo Jewelry***'. 
 
-El objetivo de este proyecto es implementar el prototipo del sitio web realizado en Figma a través de HTML y CSS, y posteriormente desplegar la página web estática con GitHub Pages.
+El objetivo de este proyecto es implementar en HTML y CSS el prototipado del sitio web realizado en Figma, y posteriormente desplegar la página web estática con GitHub Pages.
 
 
 ___
