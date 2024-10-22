@@ -11,6 +11,7 @@ ___
 
 ### Estructura del Proyecto
 
+- **landing.html**: página de inicio del sitio.
 - **login.html**: página de inicio de sesión.
 - **signup.html**: página de registro.
 - **img_resources/**: contiene las imágenes requeridas.
