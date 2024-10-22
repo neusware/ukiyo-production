@@ -85,14 +85,19 @@
         } */
         .hero {
             height: 600px;
-            background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hero-image-7Oa2Aq7Oa2Aq7Oa2Aq7Oa2Aq7Oa2Aq.jpg');
+            /* background-image: #;
             background-size: cover;
-            background-position: center;
+            background-position: center; */
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        .hero-content {
+        .hero img{
+            width: 100%; 
+            height: 100%; 
+            object-fit:cover;
+        }
+        /* .hero-content {
             text-align: center;
             color: rgb(160, 159, 159);
         }
@@ -103,7 +108,7 @@
         .hero p {
             font-size: 1.2em;
             margin-bottom: 30px;
-        }
+        } */
         .banner {
             background-color: #f0f0f0;
             padding: 10px 0;
@@ -117,7 +122,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 40px auto;
         }
         .producto {
@@ -126,9 +131,23 @@
             flex-direction: column;
         }
         .producto-imagen {
+            
+        }
+        .producto-imagen {
+            position: relative;
+            overflow: hidden;
             aspect-ratio: 1 / 1;
             background-color: #f0f0f0;
             margin-bottom: 10px;
+        }
+        .producto-imagen img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         .producto-grande {
             flex: 0 0 calc(50% - 10px);
@@ -236,7 +255,7 @@
         </div>
         <header>
             <nav>
-                <a href="index.html" class="logo">UKIYO</a>
+                <a href="#" class="logo">UKIYO</a>
                 <ul class="enlaces-nav">
                     <li><a href="#">Novedades</a></li>
                     <li><a href="#">Anillos</a></li>
@@ -265,89 +284,152 @@
         <main>
             
             <section class="hero">
-                <div class="hero-content">
+                <!-- <div class="hero-content">
                     <h1>Descubre nuestra colección</h1>
                     <p>Joyas únicas para momentos especiales</p>
-                </div>
+                </div> -->
+                <img src="./img_resources/mid.webp" alt="Colección de joyas UKIYO"">
             </section>
         
             <div class="banner">
                 JOIN THE EXPERIENCES
             </div>
             <div class="productos">
+
                 <div class="fila-productos">
                     <div class="producto producto-grande">
-                        <div class="producto-imagen"></div>
+                        <div class="producto-imagen">
+                            <img src="./img_resources/productos/g1.webp" alt="">
+                        </div>
                         <div class="producto-info">
-                            <h3>Descripción del producto</h3>
-                            <p>Precio €</p>
+                            <h3>Look `Tubogas´ plata bañada en oro</h3>
+                            <p>Precio del look: 417€</p>
                         </div>
                     </div>
                     <div class="producto">
-                        <div class="producto-imagen"></div>
+                        <div class="producto-imagen">
+                            <img src="./img_resources/productos/p13.webp" alt="">
+                        </div>
                         <div class="producto-info">
-                            <h3>Descripción del producto</h3>
-                            <p>Precio €</p>
+                            <h3>Piercing de oro blanco de 18K con diamantes negros</h3>
+                            <p>169 €</p>
                         </div>
                     </div>
                     <div class="producto">
-                        <div class="producto-imagen"></div>
+                        <div class="producto-imagen">
+                            <img src="./img_resources/productos/p14.webp" alt="">
+                        </div>
                         <div class="producto-info">
-                            <h3>Descripción del producto</h3>
-                            <p>Precio €</p>
+                            <h3>Piercing de oro amarillo de 18K con amatista morada</h3>
+                            <p>30 €</p>
                         </div>
                     </div>
                 </div>
+
                 <div class="fila-productos">
                     <div class="producto">
-                        <div class="producto-imagen"></div>
+                        <div class="producto-imagen">
+                            <img src="./img_resources/productos/p55.webp" alt="">
+                        </div>
                         <div class="producto-info">
-                            <h3>Descripción del producto</h3>
-                            <p>Precio €</p>
+                            <h3>Piercing barra industrial de oro amarillo 18K</h3>
+                            <p>159 €</p>
                         </div>
                     </div>
                     <div class="producto">
-                        <div class="producto-imagen"></div>
+                        <div class="producto-imagen">
+                            <img src="./img_resources/productos/p44.webp" alt="">
+                        </div>
                         <div class="producto-info">
-                            <h3>Descripción del producto</h3>
-                            <p>Precio €</p>
+                            <h3>Piercing de oro amarillo de 18K con forma de escarabajo con ónix y diamantes</h3>
+                            <p>255 €</p>
                         </div>
                     </div>
                     <div class="producto">
-                        <div class="producto-imagen"></div>
+                        <div class="producto-imagen">
+                            <img src="./img_resources/productos/p66.webp" alt="">
+                        </div>
                         <div class="producto-info">
-                            <h3>Descripción del producto</h3>
-                            <p>Precio €</p>
+                            <h3>Pendiente individual de oro amarillo de 18K con diamantes</h3>
+                            <p>279 €</p>
                         </div>
                     </div>
                     <div class="producto">
-                        <div class="producto-imagen"></div>
+                        <div class="producto-imagen">
+                            <img src="./img_resources/productos/p77.webp" alt="">
+                        </div>
                         <div class="producto-info">
-                            <h3>Descripción del producto</h3>
-                            <p>Precio €</p>
+                            <h3>Pendientes de aro cuadrados en plata 925 bañada en oro amarillo de 18K</h3>
+                            <p>49 €</p>
                         </div>
                     </div>
                 </div>
+                
                 <div class="fila-productos">
+                    <div class="producto">
+                        <div class="producto-imagen">
+                            <img src="./img_resources/productos/p88.webp" alt="">
+                        </div>
+                        <div class="producto-info">
+                            <h3>Pendiente de aro pequeño de plata 925 bañada en oro amarillo de 18K con estrella</h3>
+                            <p>49 €</p>
+                        </div>
+                    </div>
+                    <div class="producto">
+                        <div class="producto-imagen">
+                            <img src="./img_resources/productos/p33.webp" alt="">
+                        </div>
+                        <div class="producto-info">
+                            <h3>Piercing individual de oro amarillo y blanco de 18K con diamantes blancos en talla brillante</h3>
+                            <p>239 €</p>
+                        </div>
+                    </div>
+                    <div class="producto">
+                        <div class="producto-imagen">
+                            <img src="./img_resources/productos/p99.webp" alt="">
+                        </div>
+                        <div class="producto-info">
+                            <h3>Pendientes pequeños de aro de plata 925 bañada en oro rosa de 18K</h3>
+                            <p>49 €</p>
+                        </div>
+                    </div>
+                    <div class="producto">
+                        <div class="producto-imagen">
+                            <img src="./img_resources/productos/p22.webp" alt="">
+                        </div>
+                        <div class="producto-info">
+                            <h3>Piercing línea de oro blanco de 18K con diamantes</h3>
+                            <p>185 €</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fila-productos">
+                    <div class="producto">
+                        <div class="producto-imagen">
+                            <img src="./img_resources/productos/p11.webp" alt="">
+                        </div>
+                        <div class="producto-info">
+                            <h3>Piercing línea de oro amarillo de 18K con amatista, rubí y zafiros multicolor</h3>
+                            <p>150 €</p>
+                        </div>
+                    </div>
+                    <div class="producto">
+                        <div class="producto-imagen">
+                            <img src="./img_resources/productos/p12.webp" alt="">
+                        </div>
+                        <div class="producto-info">
+                            <h3>Pendiente individual de oro amarillo de 18K con esmeralda verde</h3>
+                            <p>139 €</p>
+                        </div>
+                    </div>
                     <div class="producto producto-grande">
-                        <div class="producto-imagen"></div>
-                        <div class="producto-info">
-                            <h3>Descripción del producto</h3>
-                            <p>Precio €</p>
+                        <div class="producto-imagen">
+                            <img src="./img_resources/productos/g2.webp" alt="">
                         </div>
-                    </div>
-                    <div class="producto">
-                        <div class="producto-imagen"></div>
                         <div class="producto-info">
-                            <h3>Descripción del producto</h3>
-                            <p>Precio €</p>
-                        </div>
-                    </div>
-                    <div class="producto">
-                        <div class="producto-imagen"></div>
-                        <div class="producto-info">
-                            <h3>Descripción del producto</h3>
-                            <p>Precio €</p>
+                            <h3>Look Daith bañado en oro</h3>
+                            <p>Precio del look: 236 €</p>
                         </div>
                     </div>
                 </div>
