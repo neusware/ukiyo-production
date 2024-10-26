@@ -75,47 +75,104 @@
             border-left: 1px solid #000;
             padding-left: 15px;
         }
-        main {
+      
+
+        /* ---------------------main section ----------------------- */
+        /* main {
             flex-grow: 1;
             display: flex;
             justify-content: center;
             align-items: flex-start;
             padding: 50px 20px;
-        }
-        .contenedor-login {
-            display: flex;
-            width: 100%;
-            max-width: 800px;
-            gap: 60px;
-            align-items: flex-start;
-        }
-        .formulario-login, .info-registro {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .info-registro {
-            border-left: 1px solid #e0e0e0;
-            padding-left: 80px;
-            margin-left: 25px;
-        }
-        .formulario-login h2, .info-registro h2 {
-            margin-bottom: 20px;
-        }
-        h2 {
-            margin-bottom: 20px;
-            font-size: 1.5em;
-        }
-        input[type="email"], input[type="password"] {
-            width: calc(100% - 22px);
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
+        } */
+    
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
             font-size: 14px;
-            margin-top: 15px;
         }
+        .contenedor-cesta {
+            max-width: 600px;
+            margin: 25px auto;
+            padding: 20px;
+            
+        }
+        .header-cesta {
+            border-bottom: 1px solid black;
+            /* border-left: 1px solid black; */
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+        }
+        .header-cesta img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        .header-cesta h2 {
+            margin: 0;
+            font-size: 18px;
+        }
+        .contenido-cesta {
+            text-align: center;
+            padding: 40px 0;
+            border-left: none;
+        }
+        .contenido-cesta img {
+            width: 45px;
+            height: 45px;
+            margin-bottom: 0;
+        }
+        .contenido-cesta h2 {
+            margin: 0 0 10px;
+            font-size: 18px;
+        }
+        .contenido-cesta p {
+            margin: 0 0 20px;
+            color: #666;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .section-comunidad {
+            background-color: #f5f5f5;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        .section-comunidad h3 {
+            margin: 0 0 10px;
+            font-size: 16px;
+        }
+        .section-comunidad p {
+            margin: 0 0 20px;
+            color: #666;
+        }
+        .icono-cesta {
+            border-left: 1px solid black;
+            /* padding-left: 10px; */
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: left;
+        }
+        .icono-cesta img {
+            display: block;
+            margin: 0 auto;
+            width: 40px;
+            height: 40px;
+        }
+        /* ---------------------main section ----------------------- */
+        
+
         button {
             width: 100%;
             padding: 10px;
@@ -125,47 +182,7 @@
             border-radius: 4px;
             cursor: pointer;
         }
-        .formulario-login button {
-            width: 100%;
-            padding: 10px;
-            margin-top: 15px;
-            margin-bottom: 0;
-            font-size: 14px;
-            height: 38px;
-        }
-        .olvido-contrasena {
-            display: block;
-            margin-top: 10px;
-            text-align: left;
-            color: #000;
-            text-decoration: underline;
-            font-size: 12px;
-        }
-        .beneficios {
-            flex-grow: 1;
-            list-style-type: none;
-            padding: 0;
-            margin-bottom: 30px;
-        }
-        .beneficios li {
-            margin-bottom: 10px;
-            padding-left: 25px;
-            position: relative;
-        }
-        .beneficios li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-        }
-        .crear-cuenta {
-            background-color: #fff;
-            color: #000;
-            border: 1px solid #000;
-            margin-top: -12px;
-        }
-        .formulario-login form {
-            margin-bottom: 20px;
-        }
+    
         footer {
             background-color: #f5f5f5;
             padding: 40px 20px 20px;
@@ -221,6 +238,9 @@
             color: #000;
             text-decoration: none;
         }
+
+        
+        
     </style>
 </head>
 <body>
@@ -249,38 +269,38 @@
                     <a href="#">
                         <img src="./img_resources/search-svgrepo-com.svg" alt="Buscar">
                     </a>
-                    <a href="./empy_cart.html">
-                        <img src="./img_resources/shopping-bag-svgrepo-com.svg" alt="Carrito">
+                    <a href="#">
+                        <img src="./img_resources/shopping-bag-svgrepo-com.svg" alt="Cesta">
                     </a>
                 </div>
             </nav>
         </header>
 
-        <main>
-            <div class="contenedor-login">
-                <div class="formulario-login">
-                    <h2>Iniciar sesión</h2>
-                    <form action="#" method="#">
-                        <input type="email" placeholder="Email" required>
-                        <input type="password" placeholder="Contraseña" required>
-                        <button type="submit">Iniciar sesión</button>
-                        <a href="#" class="olvido-contrasena">¿Problemas con la contraseña?</a>
-                    </form>
+        <div class="contenedor-cesta">
+<header class="header-cesta">
+    <img src="./img_resources/shopping-bag-svgrepo-com.svg" alt="Cesta">
+    <h2>Cesta</h2>
+</header>
+            
+            <main>
+                <div class="contenido-cesta">
+                    <div class="icono-cesta">
+                        <img src="./img_resources/shopping-bag-svgrepo-com.svg" alt="Cesta vacía">
+                    </div>
+                    <h2>Su cesta está vacía</h2>
+                    <p>Explora nuestras colecciones y añade artículos a la cesta</p>
+                    <a href="./landing.html" class="btn">Ver novedades</a>
                 </div>
-                <div class="info-registro">
-                    <h2>Registrarse</h2>
-                    <ul class="beneficios">
-                        <li>Realizar pedidos ágilmente ya que tus datos estarán guardados</li>
-                        <li>Guarda tus joyas favoritas</li>
-                        <li>Seguimiento de tus pedidos</li>
-                        <li>Gestión de devoluciones y cambios fácilmente</li>
-                    </ul>
-                    <a href="./signup.html">
-                        <button class="crear-cuenta">Crear cuenta</button>
-                    </a>
-                </div>
-            </div>
-        </main>
+                
+                <section class="section-comunidad">
+                    <h3>Únete a la comunidad</h3>
+                    <p>Consigue acceso previo a todas nuestras novedades y ventajas exclusivas</p>
+                    
+                    <a href="./signup.html" class="btn">Formar parte</a>
+                </section>
+            </main>
+        </div>
+        
 
         <footer>
             <div class="contenido-footer">
