@@ -12,7 +12,7 @@ ___
 ### Estructura del Proyecto
 
 - **landing.html**: página de inicio del sitio.
-- **login.html**: página de inicio de sesión.
+- **login.html**: página de inicio de sesión del usuario.
 - **signup.html**: página de registro.
 - **empty_cart.html**: página de cesta (sin productos).
 - **img_resources/**: contiene las imágenes requeridas.
