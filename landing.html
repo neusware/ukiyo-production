@@ -200,7 +200,7 @@
             justify-content: space-between;
             max-width: 1400px; 
             margin: 0 auto;
-            padding: 0 20px; 
+            padding: 10px 10px 30px 10px;
         }
         .footer-izquierda {
             flex: 1;
@@ -234,16 +234,45 @@
             margin-top: 10px;
         }
         .footer-inferior {
-            margin-top: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 20px 0px 20px;
+            padding: 20px 20px 0;
             border-top: 1px solid #e0e0e0;
+        }
+        .footer-inferior > * {
+            flex: 1;
+        }
+        .language-license {
+            display: flex;
+            align-items: baseline;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .language-selection {
+            margin-right: 20px;
+            white-space: nowrap;
+        }
+        .license-info {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-width: 0; /* This ensures text truncation works properly */
+        }
+        .language-license img {
+            height: 16px;
+            width: auto;
+            margin-left: 3px;
+            vertical-align:bottom;
+        }
+        .enlaces-footer {
+            text-align: right;
         }
         .enlaces-footer a {
             margin-left: 15px;
-            color: #000;
+            color: black;
             text-decoration: none;
         }
     </style>
@@ -509,10 +538,24 @@
                     <p>Suscríbete a nuestra newsletter y tendrás acceso a novedades y ventajas exclusivas en tu email.</p>
                     <a href="./signup.html">
                         <button class="boton-suscribirse">Suscribirse</button>
+                    </a>
                 </div>
             </div>
             <div class="footer-inferior">
-                <span>ES - Español</span>
+                <div class="language-license">
+                    <div class="language-selection">ES - Español</div>
+                    <div class="license-info">
+                        <span>
+                            <a href="https://neusware.github.io/ukiyo-production">Joyería Ukiyo</a> de
+                            <a href="https://github.com/neusware">Neusware</a> está marcada con
+                            <a href="https://creativecommons.org/publicdomain/zero/1.0/?ref=chooser-v1" target="_blank"
+                                rel="license noopener noreferrer" style="display:inline-block;">
+                                CC0 1.0
+                                <img src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1" alt="CC0">
+                            </a>
+                        </span>
+                    </div>
+                </div>
                 <div class="enlaces-footer">
                     <a href="#">Código ético</a>
                     <a href="#">Condiciones generales</a>
