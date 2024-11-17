@@ -276,6 +276,25 @@
             color: black;
             text-decoration: none;
         }
+        .reproductor-audio {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: 10px;
+        }
+
+        .reproductor-audio button {
+        background-color: #000;
+        color: #fff;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 12px;
+        }
+
+        .reproductor-audio .audio-feedback {
+        font-size: 12px;
+        }
     </style>
 </head>
 <body>
@@ -557,7 +576,13 @@
                         </span>
                     </div>
                 </div>
+                
                 <div class="enlaces-footer">
+                    <div class="reproductor-audio">
+                        <audio id="audioFondo" src="./img_resources/Miles Davis - So What (Official Video) [ ezmp3.cc ].mp3"></audio>
+                        <button id="btnReproducirPausar">Reproducir</button>
+                        <span class="retroalimentacion-audio" id="retroalimentacionAudio"></span>
+                    </div>
                     <a href="#">Código ético</a>
                     <a href="#">Condiciones generales</a>
                     <a href="#">Política de cookies</a>
@@ -566,5 +591,25 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        const audioFondo = document.getElementById('audioFondo');
+        const btnReproducirPausar = document.getElementById('btnReproducirPausar');
+        const retroalimentacionAudio = document.getElementById('retroalimentacionAudio');
+    
+        btnReproducirPausar.addEventListener('click', alternarReproduccion);
+    
+        function alternarReproduccion() {
+            if (audioFondo.paused) {
+                audioFondo.play();
+                btnReproducirPausar.textContent = 'Pausar';
+                retroalimentacionAudio.textContent = 'Reproduciendo';
+            } else {
+                audioFondo.pause();
+                btnReproducirPausar.textContent = 'Reproducir';
+                retroalimentacionAudio.textContent = ''
+            }
+        }
+    </script>
 </body>
 </html>
