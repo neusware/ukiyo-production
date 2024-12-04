@@ -10,21 +10,24 @@ El objetivo de este proyecto es implementar en HTML y CSS el prototipado del sit
 ___
 
 ### Estructura del Proyecto
+[Página de inicio](https://neusware.github.io/ukiyo-production/landing.html)
 
-- **landing.html**: página de inicio del sitio.
-- **login.html**: página de inicio de sesión del usuario.
-    - **signup.html**: página de registro del usuario.
-- **product_view.html**: página de vista tipo de un producto.
-- **product_cart.html**: página de cesta (con producto).
-    - **empty_cart.html**: página de cesta (sin productos).
+[Iniciar sesión](https://neusware.github.io/ukiyo-production/login.html) - [Registrarse](https://neusware.github.io/ukiyo-production/signup.html)
+
+[Producto](https://neusware.github.io/ukiyo-production/product-view.html)
+
+[Cesta vacía](https://neusware.github.io/ukiyo-production/empy_cart.html) - [Cesta con producto](product-cart.html)
+
+[Página de pago](https://neusware.github.io/ukiyo-production/payment.html)
+
  
       
-- **img_resources/**: contiene las imágenes requeridas.
+**/img_resources**: contenido multimedia requerido.
 
 
 ### Tecnologías
 
-HTML y CSS.
+**HTML, CSS y Bootstrap**.
 
 ### Despliegue
 
