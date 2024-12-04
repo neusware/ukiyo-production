@@ -14,6 +14,7 @@ ___
 - **landing.html**: página de inicio del sitio.
 - **login.html**: página de inicio de sesión del usuario.
     - **signup.html**: página de registro del usuario.
+- **product_view.html**: página de vista tipo de un producto.
 - **product_cart.html**: página de cesta (con producto).
     - **empty_cart.html**: página de cesta (sin productos).
  
