@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+<!-- todo remove scroll bar appearing on display -->
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +10,21 @@
     <title>UKIYO - Iniciar sesión</title>
     
     <style>
-        body, html {
+        body,
+        html {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
             height: 100%;
             font-size: 14px;
         }
+
         .contenedor {
             display: flex;
             flex-direction: column;
             min-height: 100vh;
         }
+
         .banner-superior {
             background-color: #000;
             color: #fff;
@@ -27,116 +32,126 @@
             text-align: center;
             font-size: 10.5px;
         }
+
         header {
             background-color: #fff;
             border-bottom: 1px solid #e0e0e0;
             padding: 10px 20px;
         }
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         .logo {
             font-weight: bold;
             font-size: 24px;
-       
-        }
-        
-        a {
-            /* font-weight: bold; */
-            /* font-size: 24px; */
             color: black;
-            text-decoration: none;    
+            text-decoration: none;
         }
+
         .enlaces-nav {
             list-style: none;
             display: flex;
             gap: 20px;
         }
+
         .enlaces-nav a {
             text-decoration: none;
             color: #000;
         }
+
         .acciones-usuario {
             display: flex;
             gap: 10px;
         }
+
         .acciones-usuario img {
             width: 20px;
             height: 20px;
         }
+
         .acciones-usuario a {
             text-decoration: none;
             color: #000;
             display: flex;
             align-items: center;
         }
+
         .acciones-usuario a:last-child {
             margin-left: 8px;
             border-left: 1px solid #000;
             padding-left: 15px;
         }
-      
 
-        /* ---------------------main section ----------------------- */
-        /* main {
-            flex-grow: 1;
+        .main-container {
+            max-width: 1200px;
+            margin: 50px auto;
+
+            padding:0px 20px 20px 20px;
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            padding: 50px 20px;
-        } */
-    
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            height: 100%;
-            font-size: 14px;
+            justify-content: space-between;
+            gap: 40px;
+            align-items: stretch;
         }
+
         .contenedor-cesta {
-            max-width: 600px;
-            margin: 25px auto;
-            padding: 20px;
-            
+            flex: 1;
+            min-height: 400px;
+            margin-right: 100px;
         }
+
         .header-cesta {
             border-bottom: 1px solid black;
-            /* border-left: 1px solid black; */
             padding-bottom: 10px;
             margin-bottom: 20px;
             display: flex;
             align-items: center;
-            padding-left: 10px;
         }
+
         .header-cesta img {
             width: 24px;
             height: 24px;
             margin-right: 10px;
         }
+
         .header-cesta h2 {
             margin: 0;
             font-size: 18px;
         }
+
         .contenido-cesta {
             text-align: center;
             padding: 40px 0;
-            border-left: none;
         }
-        .contenido-cesta img {
-            width: 45px;
-            height: 45px;
-            margin-bottom: 0;
+
+        .icono-cesta {
+            border-left: 1px solid black;
+            /* padding-left: 20px; */
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: left;
         }
+
+        .icono-cesta img {
+            display: block;
+            margin: 0 auto;
+            width: 40px;
+            height: 40px;
+        }
+
         .contenido-cesta h2 {
-            margin: 0 0 10px;
+            margin: 20px 0 10px;
             font-size: 18px;
         }
+
         .contenido-cesta p {
             margin: 0 0 20px;
             color: #666;
         }
+
         .btn {
             display: inline-block;
             background-color: #000;
@@ -144,107 +159,174 @@
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 4px;
+            font-size: 14px;
+            width: 85%;
         }
+
+        .metodos-pago {
+            width: 300px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .metodos-pago h3 {
+            font-size: 14px;
+            margin: 0 0 20px 0;
+            color: #333;
+        }
+
+        .iconos-pago {
+            display: flex;
+            flex-wrap: wrap;
+            /* gap: 10px; */
+            justify-content: space-between;
+        }
+
+        .iconos-pago img {
+            /* max-width:30%; */
+            height: 20px;
+            object-fit: contain;
+            margin-bottom: 10px;
+            width: 60px;
+        }
+
         .section-comunidad {
             background-color: #f5f5f5;
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
             margin-top: 40px;
+            border-radius: 4px;
         }
+
         .section-comunidad h3 {
             margin: 0 0 10px;
             font-size: 16px;
         }
+
         .section-comunidad p {
             margin: 0 0 20px;
             color: #666;
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        .icono-cesta {
-            border-left: 1px solid black;
-            /* padding-left: 10px; */
-            margin-bottom: 20px;
-            width: 100%;
-            text-align: left;
-        }
-        .icono-cesta img {
-            display: block;
-            margin: 0 auto;
-            width: 40px;
-            height: 40px;
-        }
-        /* ---------------------main section ----------------------- */
-        
 
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #000;
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-    
         footer {
             background-color: #f5f5f5;
-            padding: 40px 20px 20px;
+            padding: 20px 20px;
             font-size: 12px;
         }
+
         .contenido-footer {
             display: flex;
             justify-content: space-between;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 10px 10px 30px 10px;
         }
+
         .footer-izquierda {
             flex: 1;
             margin-left: 50px;
         }
+
         .footer-derecha {
             flex: 1;
             margin-left: 100px;
         }
+
         .columnas-footer {
             display: flex;
             flex: 2;
             justify-content: space-between;
         }
+
         .columna-footer h4 {
             margin-bottom: 10px;
         }
+
         .columna-footer ul {
             list-style-type: none;
             padding: 0;
         }
+
         .columna-footer li {
             margin-bottom: 5px;
         }
+
         .boton-suscribirse {
             background-color: #000;
+            width: 100%;
+            border-radius: 4px;
             color: #fff;
             border: none;
             padding: 10px 20px;
             cursor: pointer;
-            margin-top: 10px;
+            margin-top: 10px
         }
+
         .footer-inferior {
-            margin-top: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding-top: 20px;
+            padding: 20px 20px 0;
             border-top: 1px solid #e0e0e0;
         }
-        .enlaces-footer a {
-            margin-left: 15px;
-            color: #000;
+
+        .footer-inferior>* {
+            flex: 1;
+        }
+
+        .language-license {
+            display: flex;
+            align-items: baseline;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .language-selection {
+            margin-right: 20px;
+            white-space: nowrap;
+        }
+
+        .license-info {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-width: 0;
+            /* This ensures text truncation works properly */
+        }
+
+        .license-info a {
+            color: black;
             text-decoration: none;
         }
 
-        
-        
+        .language-license img {
+            height: 16px;
+            width: auto;
+            margin-left: 3px;
+            vertical-align: bottom;
+        }
+
+        .enlaces-footer {
+            text-align: right;
+        }
+
+        .enlaces-footer a {
+            margin-left: 15px;
+            color: black;
+            text-decoration: none;
+        }
     </style>
 </head>
+
 <body>
     <div class="contenedor">
         <div class="banner-superior">
@@ -278,31 +360,43 @@
             </nav>
         </header>
 
-        <div class="contenedor-cesta">
-<header class="header-cesta">
-    <img src="./img_resources/shopping-bag-svgrepo-com.svg" alt="Cesta">
-    <h2>Cesta</h2>
-</header>
-            
-            <main>
-                <div class="contenido-cesta">
-                    <div class="icono-cesta">
-                        <img src="./img_resources/shopping-bag-svgrepo-com.svg" alt="Cesta vacía">
+        <div class="main-container">
+            <div class="contenedor-cesta">
+                <header class="header-cesta">
+                    <img src="./img_resources/shopping-bag-svgrepo-com.svg" alt="Cesta">
+                    <h2>Cesta</h2>
+                </header>
+
+                <main>
+                    <div class="contenido-cesta">
+                        <div class="icono-cesta">
+                            <img src="./img_resources/shopping-bag-svgrepo-com.svg" alt="Cesta vacía">
+                        </div>
+                        <h2>Su cesta está vacía</h2>
+                        <p>Explora nuestras colecciones y añade artículos a la cesta</p>
+                        <a href="./landing.html" class="btn">Ver novedades</a>
                     </div>
-                    <h2>Su cesta está vacía</h2>
-                    <p>Explora nuestras colecciones y añade artículos a la cesta</p>
-                    <a href="./landing.html" class="btn">Ver novedades</a>
+
+                    <section class="section-comunidad">
+                        <h3>Únete a la comunidad</h3>
+                        <p>Consigue acceso previo a todas nuestras novedades y ventajas exclusivas</p>
+                        <a href="./signup.html" class="btn">Formar parte</a>
+                    </section>
+                </main>
+            </div>
+
+            <div class="metodos-pago">
+                <h3>Métodos de pago aceptados</h3>
+                <div class="iconos-pago">
+                    <img src="./img_resources/visa.svg" alt="Visa">
+                    <img src="./img_resources/googlepay.svg" alt="Google Pay">
+                    <img src="./img_resources/paypal.svg" alt="PayPal">
+                    <img src="./img_resources/applepay.svg" alt="Apple Pay">
+                    <img src="./img_resources/credit-card-svgrepo-com.svg" alt="Credit Card">
+                    <img src="./img_resources/klarna.svg" alt="Klarna">
                 </div>
-                
-                <section class="section-comunidad">
-                    <h3>Únete a la comunidad</h3>
-                    <p>Consigue acceso previo a todas nuestras novedades y ventajas exclusivas</p>
-                    
-                    <a href="./signup.html" class="btn">Formar parte</a>
-                </section>
-            </main>
+            </div>
         </div>
-        
 
         <footer>
             <div class="contenido-footer">
@@ -346,13 +440,29 @@
                     </div>
                 </div>
                 <div class="footer-derecha">
-                    <p>Suscríbete a nuestra newsletter y tendrás acceso a novedades y ventajas exclusivas en tu email.</p>
+                    <p>Suscríbete a nuestra newsletter y tendrás acceso a novedades y ventajas exclusivas en tu email.
+                    </p>
                     <a href="./signup.html">
                         <button class="boton-suscribirse">Suscribirse</button>
+                    </a>
                 </div>
             </div>
             <div class="footer-inferior">
-                <span>ES - Español</span>
+                <div class="language-license">
+                    <div class="language-selection">ES - Español</div>
+                    <div class="license-info">
+                        <span>
+                            <a href="https://neusware.github.io/ukiyo-production">Joyería Ukiyo</a> de
+                            <a href="https://github.com/neusware">Neusware</a> está marcada con
+                            <a href="https://creativecommons.org/publicdomain/zero/1.0/?ref=chooser-v1" target="_blank"
+                                rel="license noopener noreferrer" style="display:inline-block;">
+                                CC0 1.0
+                                <img src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1"
+                                    alt="CC0">
+                            </a>
+                        </span>
+                    </div>
+                </div>
                 <div class="enlaces-footer">
                     <a href="#">Código ético</a>
                     <a href="#">Condiciones generales</a>
@@ -360,7 +470,10 @@
                     <a href="#">Política de privacidad</a>
                 </div>
             </div>
-        </footer>
+    </div>
+    </div>
+    </footer>
     </div>
 </body>
+
 </html>

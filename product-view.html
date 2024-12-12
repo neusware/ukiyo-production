@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<!-- TODO AUMENTAR EL SIZE DE LANDING Y PRODUCT VIEW -->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img_resources/favicon.ico" type="image/x-icon">
+    <title>UKIYO - Producto</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .banner-superior {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            font-size: 10.5px;
+        }
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 10px 20px;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            color: black;
+            text-decoration: none;
+        }
+        .enlaces-nav {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        .enlaces-nav a {
+            text-decoration: none;
+            color: #000;
+        }
+        .acciones-usuario {
+            display: flex;
+            gap: 10px;
+        }
+        .acciones-usuario img {
+            width: 20px;
+            height: 20px;
+        }
+        .acciones-usuario a {
+            text-decoration: none;
+            color: #000;
+            display: flex;
+            align-items: center;
+        }
+        .acciones-usuario a:last-child {
+            margin-left: 8px;
+            border-left: 1px solid #f0f0f0;
+            padding-left: 15px;
+        }
+        .container {
+            max-width: 1750px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .product-view {
+            display: flex;
+            gap: 40px;
+            margin: 100px 0 150px;
+        }
+        .product-images {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .product-image {
+            width: calc(50% - 5px);
+            aspect-ratio: 1;
+            object-fit: cover;
+            height: 600px;
+            /* width: calc((100vw - 60px) / 2 - 5px); */
+        }
+        .product-info {
+            flex: 1;
+        }
+        .product-title {
+            font-size: 20px;
+            /* font-weight: 100; */
+            margin-bottom: 10px;
+        }
+        .product-price {
+            font-size: 18px;
+            /* font-weight: bold; */
+            margin-bottom: 20px;
+        }
+        .product-options {
+            margin-bottom: 20px;
+        }
+        .option-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .option-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .option-button {
+            padding: 5px 10px;
+            border: 1px solid #000;
+            background: none;
+            cursor: pointer;
+        }
+        .option-button.selected {
+            background-color: #000;
+            color: #fff;
+        }
+        .add-to-cart, .add-to-wishlist {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .add-to-cart {
+            background-color: #000;
+            color: #fff;
+            border: none;
+        }
+        .add-to-wishlist {
+            background: none;
+            border: 1px solid #000;
+        }
+        .product-description {
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #f5f5f5;
+            padding: 40px 0 20px;
+            font-size: 12px;
+            margin-top: auto;
+        }
+        .contenido-footer {
+            display: flex;
+            justify-content: space-between;
+            max-width: 1400px; 
+            margin: 0 auto;
+            padding: 10px 10px 30px 10px;
+        }
+        .footer-izquierda {
+            flex: 1;
+        }
+        .footer-derecha {
+            flex: 1;
+            margin-left: 100px;
+        }
+        .columnas-footer {
+            display: flex;
+            flex: 2;
+            justify-content: space-between;
+        }
+        .columna-footer h4 {
+            margin-bottom: 10px;
+        }
+        .columna-footer ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .columna-footer li {
+            margin-bottom: 5px;
+        }
+        .boton-suscribirse {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 4px;
+            width: 100%;
+        }
+        .footer-inferior {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px 0;
+            border-top: 1px solid #e0e0e0;
+        }
+        .footer-inferior > * {
+            flex: 1;
+        }
+        .language-license {
+            display: flex;
+            align-items: baseline;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .language-selection {
+            margin-right: 20px;
+            white-space: nowrap;
+        }
+        .license-info {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-width: 0;
+        }
+        .license-info a {
+            color: black;
+            text-decoration: none;
+        }
+        .language-license img {
+            height: 16px;
+            width: auto;
+            margin-left: 3px;
+            vertical-align: bottom;
+        }
+        .enlaces-footer {
+            text-align: right;
+        }
+        .enlaces-footer a {
+            margin-left: 15px;
+            color: black;
+            text-decoration: none;
+        }
+        .reproductor-audio {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: 10px;
+        }
+        .reproductor-audio button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        .reproductor-audio .audio-feedback {
+            font-size: 12px;
+        }
+        @media (max-width: 768px) {
+            .product-view {
+                flex-direction: column;
+            }
+            .product-images {
+                flex-direction: column;
+            }
+            .product-image {
+                width: 100%;
+            }
+        }
+        .back-link {
+            display: block;
+            margin-bottom: 20px;
+            color: #000;
+            text-decoration: none;
+        }
+        .product-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        .product-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .icon-button {
+            background: none;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .icon-button img {
+            width: 20px;
+            height: 20px;
+        }
+        .newsletter-banner {
+            background-color: #f0f0f0;
+            padding: 10px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .product-features {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        .feature:last-child {
+            margin-bottom: 0;
+        }
+        .feature img {
+            width: 20px;
+            height: 20px;
+        }
+        .product-tabs {
+            display: flex;
+            gap: 20px;
+            border-bottom: 1px solid #e0e0e0;
+            margin-top: 30px;
+        }
+        .tab {
+            background: none;
+            border: none;
+            padding: 10px 0;
+            cursor: pointer;
+            position: relative;
+        }
+        .tab.active {
+            font-weight: bold;
+        }
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="banner-superior">
+            Envío gratis en tu primer pedido
+        </div>
+        <header>
+            <nav>
+                <a href="./landing.html" class="logo">UKIYO</a>
+                <ul class="enlaces-nav">
+                    <li><a href="#">Novedades</a></li>
+                    <li><a href="#">Anillos</a></li>
+                    <li><a href="#">Pendientes</a></li>
+                    <li><a href="#">Piercings</a></li>
+                    <li><a href="#">Pulseras</a></li>
+                    <li><a href="#">Diamantes</a></li>
+                </ul>
+                <div class="acciones-usuario">
+                    <a href="#">
+                        <img src="./img_resources/location-1-svgrepo-com.svg" alt="Localización">
+                    </a>
+                    <a href="./login.html">
+                        <img src="./img_resources/user.svg" alt="Usuario">
+                    </a>
+                    <a href="#">
+                        <img src="./img_resources/search-svgrepo-com.svg" alt="Buscar">
+                    </a>
+                    <a href="./empy_cart.html">
+                        <img src="./img_resources/shopping-bag-svgrepo-com.svg" alt="Carrito">
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container">
+            <div class="product-view">
+                <div class="product-images">
+                    <video class="product-image" src="./img_resources/TA-TU Pulseras permanentes en oro - Soldadas Aristocrazy-01.mp4" autoplay muted loop></video>
+                    <img src="./img_resources/productos/pv1.webp" alt="Piercing image 1" class="product-image">
+                    <img src="./img_resources/productos/pv2.webp" alt="Piercing image 2" class="product-image">
+                    <img src="./img_resources/productos/pv3.webp" alt="Piercing image 3" class="product-image">
+                    <img src="./img_resources/productos/pv4.webp" alt="Piercing image 4" class="product-image">
+                    <img src="./img_resources/productos/pv5.webp" alt="Piercing image 5" class="product-image">
+                    <img src="./img_resources/productos/pv6.webp" alt="Piercing image 6" class="product-image">
+                </div>
+                <div class="product-info">
+    <a href="./landing.html" class="back-link">< Sección</a>
+    <div class="product-header">
+        <h1 class="product-title">Pendientes de plata 925 bañada en oro amarillo de 18K con forma geométrica y esmalte negro</h1>
+        
+    </div>
+    <p class="product-price">199 €</p>
+    <div class="product-actions">
+        <button class="icon-button"><img src="./img_resources/share-svgrepo-com.svg" alt="Compartir"></button>
+        <button class="icon-button"><img src="./img_resources/favorite-svgrepo-com.svg" alt="Favorito"></button>
+    </div>
+    <div class="newsletter-banner">
+        -10% de descuento en tu primera compra suscribiéndote a nuestra newsletter
+    </div><a href="./product-cart.html">
+        <button href="./product-cart.html" class="add-to-cart">Añadir a la cesta</button>
+    </a>
+    <div class="product-features">
+        <div class="feature">
+            <img src="./img_resources//return-svgrepo-com.svg" alt="Devolución">
+            <span>30 días de devolución</span>
+        </div>
+        <div class="feature">
+            <img src="./img_resources/delivery-svgrepo-com.svg" alt="Envío">
+            <span>Envío gratuito por compras superiores a ...</span>
+        </div>
+        <div class="feature">
+            <img src="./img_resources//phone-svgrepo-com.svg" alt="Teléfono">
+            <span>¿Dudas? Llama al 957 86 57 80</span>
+        </div>
+    </div>
+    <!-- todo js and changing sections for btns -->
+    <div class="product-tabs">
+        <button class="tab active">Detalles</button>
+        <button class="tab">Envío y devolución</button>
+        <button class="tab">Más información</button>
+    </div>
+</div>
+            </div>
+        </main>
+
+        <footer>
+            <div class="contenido-footer">
+                <div class="footer-izquierda">
+                    <h3>UKIYO</h3>
+                    <p>¿Necesitas ayuda?</p>
+                    <p>Política de privacidad</p>
+                </div>
+                <div class="columnas-footer">
+                    <div class="columna-footer">
+                        <h4>Productos</h4>
+                        <ul>
+                            <li>Anillos</li>
+                            <li>Pulseras</li>
+                            <li>Piercings</li>
+                        </ul>
+                    </div>
+                    <div class="columna-footer">
+                        <h4>Información</h4>
+                        <ul>
+                            <li>Preguntas frecuentes</li>
+                            <li>Gestionar Devolución</li>
+                            <li>Estado de mi pedido</li>
+                        </ul>
+                    </div>
+                    <div class="columna-footer">
+                        <h4>Sobre nosotros</h4>
+                        <ul>
+                            <li>Localizador de tiendas</li>
+                            <li>Trabaja con nosotros</li>
+                            <li>Editorial</li>
+                        </ul>
+                    </div>
+                    <div class="columna-footer">
+                        <h4>¿Necesitas ayuda?</h4>
+                        <ul>
+                            <li>Inicia un chat</li>
+                            <li>Llamar a atención al cliente</li>
+                            <li>neusware@hotmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-derecha">
+                    <p>Suscríbete a nuestra newsletter y tendrás acceso a novedades y ventajas exclusivas en tu email.</p>
+                    <a href="./signup.html">
+                        <button class="boton-suscribirse">Suscribirse</button>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-inferior">
+                <div class="language-license">
+                    <div class="language-selection">ES - Español</div>
+                    <div class="license-info">
+                        <span>
+                            <a href="https://neusware.github.io/ukiyo-production">Joyería Ukiyo</a> de
+                            <a href="https://github.com/neusware">Neusware</a> está marcada con
+                            <a href="https://creativecommons.org/publicdomain/zero/1.0/?ref=chooser-v1" target="_blank"
+                                rel="license noopener noreferrer" style="display:inline-block;">
+                                CC0 1.0
+                                <img src="https://mirrors.creativecommons.org/presskit/icons/zero.svg?ref=chooser-v1" alt="CC0">
+                            </a>
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="enlaces-footer">
+                    <a href="#">Código ético</a>
+                    <a href="#">Condiciones generales</a>
+                    <a href="#">Política de cookies</a>
+                    <a href="#">Política de privacidad</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+</html>
